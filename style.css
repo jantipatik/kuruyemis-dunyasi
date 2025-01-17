@@ -46,7 +46,7 @@ nav ul li a {
 .hero-section {
     height: 100vh;
     width: 100vw;
-    background-image: url('kuruyemis/el.jpg'),
+    background-image: url('kuruyemis/stok.jpg'),
                      url('kuruyemis/arkaplan1.jpg');
     background-size: cover;
     background-position: center;
@@ -119,7 +119,7 @@ nav ul li a {
 /* Ürünler Bölümü */
 .products {
     padding: 60px 0;
-    background-image: url('kuruyemis/arkaplan2.jpg');
+    background-image: url('kuruyemis/stok.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -226,7 +226,7 @@ nav ul li a {
 /* İletişim Bölümü */
 .contact-section {
     padding: 60px 0;
-    background-image: url('kuruyemis/arkaplan3.jpg');
+    background-image: url('kuruyemis/stok.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
