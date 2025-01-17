@@ -1,0 +1,727 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.logo, .nav-buttons, .header-right {
+    position: relative;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: transparent;
+}
+
+.header-right a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cart {
+    position: relative;
+}
+
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('kuruyemis/el.jpg'),
+                     url('kuruyemis/arkaplan1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: -webkit-fill-available;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: block;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+    font-size: 1.2rem !important;
+    font-style: italic;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.info-button {
+    background-color: #00acc1;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.info-button:hover {
+    background-color: #0097a7;
+}
+
+/* Ürünler Bölümü */
+.products {
+    padding: 60px 0;
+    background-image: url('kuruyemis/arkaplan2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.products::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.products .container {
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.product-card {
+    background: white;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-card .description {
+    font-size: 1.4rem;
+    color: #666;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.info-button {
+    background-color: #00acc1;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.info-button:hover {
+    background-color: #0097a7;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+} 
+
+/* İletişim Bölümü */
+.contact-section {
+    padding: 60px 0;
+    background-image: url('kuruyemis/arkaplan3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-grid {
+    margin-top: 40px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.85) 25%),
+                      linear-gradient(-45deg, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.85) 25%),
+                      linear-gradient(45deg, rgba(255,255,255,0.85) 75%, rgba(255,255,255,0.95) 75%),
+                      linear-gradient(-45deg, rgba(255,255,255,0.85) 75%, rgba(255,255,255,0.95) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    font-size: 2.5rem;
+    color: #00acc1;
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* İletişim Bölümü için Responsive Tasarım */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Section Title rengini iletişim bölümü için güncelleme */
+.contact-section .section-title {
+    color: #fff;
+} 
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    background-image: linear-gradient(45deg, #f9f9f9 25%, transparent 25%),
+                      linear-gradient(-45deg, #f9f9f9 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, #f9f9f9 75%),
+                      linear-gradient(-45deg, transparent 75%, #f9f9f9 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.close:hover {
+    color: #333;
+} 
+
+.search-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: transparent;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.search-box.active {
+    display: block;
+}
+
+.search-box input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 200px;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    background: #00acc1;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #0097a7;
+} 
+
+.about-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-divider {
+    border: none;
+    border-top: 2px solid #eee;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 1000px;
+} 
+
+/* Mobil öncelikli medya sorguları */
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .product-card {
+        margin: 10px;
+    }
+    
+    .product-card img {
+        height: 200px;
+    }
+    
+    .product-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .product-card .description {
+        font-size: 1rem;
+    }
+    
+    .info-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Tablet için medya sorguları */
+@media (min-width: 577px) and (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Büyük ekranlar için medya sorguları */
+@media (min-width: 993px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Genel responsive özellikler */
+.logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 600px;
+    margin: 10% auto;
+}
+
+/* Dokunmatik cihazlar için iyileştirmeler */
+@media (hover: none) {
+    .product-card:hover {
+        transform: none;
+    }
+    
+    .contact-item:hover {
+        transform: none;
+    }
+    
+    .info-button {
+        padding: 15px 30px; /* Daha büyük dokunma alanı */
+    }
+} 
+
+/* Header için responsive düzenlemeler */
+@media (max-width: 576px) {
+    .header-container {
+        padding: 10px;
+    }
+    
+    .search-box {
+        width: 100%;
+        right: 0;
+    }
+    
+    .search-box input {
+        width: calc(100% - 100px);
+    }
+    
+    .top-banner {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* Modal için responsive düzenlemeler */
+@media (max-width: 576px) {
+    .modal-content {
+        margin: 5% auto;
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .modal-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Hakkımızda bölümü için responsive düzenlemeler */
+@media (max-width: 576px) {
+    .about-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+    
+    .section-divider {
+        margin: 20px auto;
+    }
+}
+
+/* Kampanya banner için responsive düzenlemeler */
+@media (max-width: 576px) {
+    .campaign-banner {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
+
+/* Sayfa yükleme performansı için iyileştirmeler */
+img {
+    loading: "lazy";
+}
+
+/* Dokunmatik cihazlar için ek iyileştirmeler */
+@media (hover: none) {
+    .search-button,
+    .close,
+    .info-button {
+        min-height: 44px; /* Apple'ın önerdiği minimum dokunma alanı */
+        min-width: 44px;
+    }
+}
+
+/* Scroll davranışı iyileştirmesi */
+html {
+    scroll-behavior: smooth;
+} 
+
+/* İletişim butonu stilleri */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.contact-button {
+    background-color: #00acc1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #0097a7;
+    transform: translateY(-2px);
+} 
+
+/* Sabit Logo */
+.fixed-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fixed-logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* İletişim butonu stilleri */
+.fixed-logo .contact-button {
+    background-color: #00acc1;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.fixed-logo .contact-button:hover {
+    background-color: #0097a7;
+    transform: translateY(-2px);
+}
+
+/* Mobil için logo boyutunu ayarla */
+@media (max-width: 576px) {
+    .fixed-logo {
+        top: 10px;
+        left: 10px;
+        gap: 10px;
+    }
+    
+    .fixed-logo img {
+        height: 40px;
+    }
+    
+    .fixed-logo .contact-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+} 
+
+/* Mobil cihazlar için hero section ayarları */
+@media (max-width: 576px) {
+    .hero-section {
+        height: 100vh; /* Fallback */
+        height: -webkit-fill-available;
+        width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-description {
+        font-size: 1rem !important;
+    }
+} 

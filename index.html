@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Doğal ve taze kuruyemişler için en iyi adres. El emeği, organik üretim.">
+    <meta name="keywords" content="kuruyemiş, organik kuruyemiş, taze kuruyemiş, el yapımı">
+    <meta name="author" content="Kuruyemiş Dünyası">
+    <title>Kuruyemiş Dünyası</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Logo ve İletişim Butonu -->
+    <div class="fixed-logo">
+        <button id="contactButton" class="contact-button" onclick="scrollToContact()">İletişim</button>
+    </div>
+
+    <!-- Ana Görsel -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>EL EMEĞİ, DOĞAL ÜRETİM</h1>
+            <p>ORGANİK & DOĞAL KURUYEMIŞLER SOFRANIZDA</p>
+            <p class="hero-description">Yöresel lezzetleri sizlerle buluşturuyoruz</p>
+        </div>
+    </div>
+
+    <!-- Ürünler Bölümü -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Ürün Çeşitlerimiz</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Kabak Çekirdeği">
+                    <h3>Özel Kavrulmuş Kabak Çekirdeği</h3>
+                    <p class="description">Özenle kavrulmuş, taze ve lezzetli</p>
+                    <button class="info-button" onclick="openModal('kabakModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Karışık Kuruyemiş">
+                    <h3>Premium Karışık Kuruyemiş</h3>
+                    <p class="description">Özenle hazırlanmış, premium kalite</p>
+                    <button class="info-button" onclick="openModal('karisikModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Sarı Leblebi">
+                    <h3>Sarı Leblebi</h3>
+                    <p class="description">Taze kavrulmuş, doğal lezzet</p>
+                    <button class="info-button" onclick="openModal('leblebiModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Ayçekirdeği">
+                    <h3>Taze Kavrulmuş Ayçekirdeği</h3>
+                    <p class="description">Özenle seçilmiş, lezzetli ayçekirdeği</p>
+                    <button class="info-button" onclick="openModal('ayModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Badem">
+                    <h3>Kavrulmuş Badem</h3>
+                    <p class="description">Taze ve doğal Türk bademi</p>
+                    <button class="info-button" onclick="openModal('bademModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Fındık">
+                    <h3>Kavrulmuş Fındık</h3>
+                    <p class="description">Giresun kalite doğal fındık</p>
+                    <button class="info-button" onclick="openModal('findikModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Yer Fıstığı">
+                    <h3>Kavrulmuş Yer Fıstığı</h3>
+                    <p class="description">Taze kavrulmuş yer fıstığı</p>
+                    <button class="info-button" onclick="openModal('fistikModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Ceviz">
+                    <h3>Taze Ceviz</h3>
+                    <p class="description">Özenle seçilmiş doğal ceviz</p>
+                    <button class="info-button" onclick="openModal('cevizModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Kaju">
+                    <h3>Kavrulmuş Kaju</h3>
+                    <p class="description">Premium kalite kaju</p>
+                    <button class="info-button" onclick="openModal('kajuModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Mısır">
+                    <h3>Kavrulmuş Mısır</h3>
+                    <p class="description">Çıtır çıtır kavrulmuş mısır</p>
+                    <button class="info-button" onclick="openModal('misirModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Antep Fıstığı">
+                    <h3>Taze Antep Fıstığı</h3>
+                    <p class="description">Gaziantep'in meşhur fıstığı</p>
+                    <button class="info-button" onclick="openModal('antepModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Kuru Üzüm">
+                    <h3>Taze Kuru Üzüm</h3>
+                    <p class="description">Çekirdeksiz kuru üzüm</p>
+                    <button class="info-button" onclick="openModal('uzumModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Kuru Kayısı">
+                    <h3>Malatya Kuru Kayısı</h3>
+                    <p class="description">Doğal Malatya kayısısı</p>
+                    <button class="info-button" onclick="openModal('kayisiModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Çam Fıstığı">
+                    <h3>Çam Fıstığı</h3>
+                    <p class="description">Premium kalite çam fıstığı</p>
+                    <button class="info-button" onclick="openModal('camfistigiModal')">Detaylı Bilgi</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Hurma">
+                    <h3>Medine Hurması</h3>
+                    <p class="description">Premium kalite taze hurma</p>
+                    <button class="info-button" onclick="openModal('hurmaModal')">Detaylı Bilgi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Hakkımızda & İletişim</h2>
+            <!-- Hakkımızda Bölümü -->
+            <div class="about-section">
+                <p class="about-text">
+                    1980 yılından bu yana Ürgüp'te kuruyemiş sektöründe hizmet vermekteyiz. 
+                    Kaliteli ürün, uygun fiyat ve müşteri memnuniyeti ilkesiyle çalışmaktayız. 
+                    Tüm ürünlerimiz özenle seçilmekte ve hijyenik koşullarda işlenmektedir. 
+                    Toptan ve perakende satışlarımızla bölgemizde güvenilir kuruyemiş tedarikçisi 
+                    olarak hizmet vermekten gurur duyuyoruz.
+                </p>
+            </div>
+            <hr class="section-divider">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adres</h3>
+                        <p>Ürgüp Bilisim ve Güvenlik Teknolojileri<br>Cumhuriyet, Dumlupınar Cd.<br>50400 Ürgüp/Nevşehir</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Telefon</h3>
+                        <p>+90 530 496 88 11</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>E-posta</h3>
+                        <p>emre5050@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Çalışma Saatleri</h3>
+                        <p>Hafta içi: 08:00 - 18:00<br>Cumartesi: 09:00 - 17:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="kabakModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('kabakModal')">&times;</span>
+            <h2>Kabak Çekirdeği Yetiştirme Tekniği</h2>
+            <p>
+                Çekirdek Kabağı ilk yetiştirilmeye başlandığı yıllarda sulu koşullarda 
+                yetiştirilmişse de daha sonraları, kıraç koşullarda da yetiştiriciliği 
+                denenmiş ve olumlu sonuçlar alınmıştır. Bu nedenle, bugün sulu koşullar 
+                yanında kıraç koşullarda da yetiştiriciliği yapılmakta ve üretici bu 
+                koşullarda bile yüksek gelir elde etme imkânı bulmaktadır.
+            </p>
+        </div>
+    </div>
+
+    <!-- Karışık Kuruyemiş Modal -->
+    <div id="karisikModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('karisikModal')">&times;</span>
+            <h2>Premium Karışık Kuruyemiş</h2>
+            <p>
+                Karışık Kuruyemiş, özenle seçilmiş ve dengeli bir şekilde karıştırılmış 
+                lezzetleriyle, atıştırmalık tutkunlarının kalbini fetheden muhteşem bir 
+                alternatiftir. Bu özel karışım, içeriğindeki çeşitlilik sayesinde 
+                damaklarda unutulmaz bir iz bırakır.
+            </p>
+            <p>
+                Her bir ısırıkta farklı bir lezzet keşfetmek isteyenler için ideal olan 
+                Süper Karışık Kuruyemiş, içeriğinde barındırdığı tuzlu fındık ve tuzlu 
+                fıstık ile tuzlu bir lezzetşöleni sunar. Antep fıstığı, özel aroma 
+                profiliyle karışıma ayrı bir karakter katar. Badem, hafif tuzlu dokusuyla 
+                hem besleyici hem de doyurucu bir deneyim sunar. Sakız kabak ve Tuzsuz 
+                leblebi ise tatlı ve çıtır bir dengenin keyfini çıkarmanızı sağlar.
+            </p>
+        </div>
+    </div>
+
+    <!-- Leblebi Modal -->
+    <div id="leblebiModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('leblebiModal')">&times;</span>
+            <h2>Sarı Leblebi</h2>
+            <p>
+                Sarı leblebi, nohutun kabuğu soyularak ve özel işlemlerden geçirilerek 
+                hazırlanan geleneksel bir Türk atıştırmalığıdır. Protein açısından zengin 
+                olan leblebi, sağlıklı bir atıştırmalık alternatifi sunar. Kavrulmuş 
+                leblebinin kendine has aroması ve çıtır yapısı, onu vazgeçilmez bir lezzet 
+                haline getirir.
+            </p>
+        </div>
+    </div>
+
+    <!-- Ayçekirdeği Modal -->
+    <div id="ayModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ayModal')">&times;</span>
+            <h2>Taze Kavrulmuş Ayçekirdeği</h2>
+            <p>
+                Ayçekirdeği, güneşin bereketini sofralarınıza taşıyan geleneksel bir 
+                atıştırmalıktır. Özenle seçilen ayçekirdekleri, özel kavurma teknikleriyle 
+                hazırlanarak eşsiz bir lezzet sunar. E vitamini, protein ve sağlıklı yağlar 
+                açısından zengin olan ayçekirdeği, hem besleyici hem de keyifli bir atıştırmalık 
+                alternatifidir.
+            </p>
+        </div>
+    </div>
+
+    <!-- Badem Modal -->
+    <div id="bademModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bademModal')">&times;</span>
+            <h2>Kavrulmuş Badem</h2>
+            <p>
+                Türkiye'nin verimli topraklarında yetişen bademler, özenle toplanıp 
+                işlendikten sonra ideal ısıda kavrularak sizlere sunulmaktadır. E vitamini, 
+                protein ve sağlıklı yağlar açısından zengin olan badem, günlük beslenmenizin 
+                vazgeçilmez bir parçası olmaya adaydır. Çıtır yapısı ve kendine has aromasıyla 
+                hem sağlıklı hem de lezzetli bir atıştırmalık alternatifi sunar.
+            </p>
+        </div>
+    </div>
+
+    <!-- Fındık Modal -->
+    <div id="findikModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('findikModal')">&times;</span>
+            <h2>Kavrulmuş Fındık</h2>
+            <p>
+                Karadeniz'in eşsiz ikliminde yetişen Giresun kalite fındıklarımız, 
+                özenle toplanıp işlendikten sonra ideal ısıda kavrularak sizlere 
+                sunulmaktadır. Yüksek protein ve E vitamini içeriğiyle sağlıklı 
+                beslenmenin vazgeçilmez bir parçası olan fındık, kendine has aroması 
+                ve lezzetiyle damak zevkinize hitap edecektir. Taze ve doğal 
+                fındıklarımız, geleneksel yöntemlerle işlenerek en kaliteli haliyle 
+                sofralarınıza ulaşmaktadır.
+            </p>
+        </div>
+    </div>
+
+    <!-- Yer Fıstığı Modal -->
+    <div id="fistikModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('fistikModal')">&times;</span>
+            <h2>Kavrulmuş Yer Fıstığı</h2>
+            <p>
+                Özenle seçilen yer fıstıkları, ideal ısıda kavrularak enfes bir lezzete 
+                dönüştürülmektedir. Protein açısından zengin olan yer fıstığı, hem sağlıklı 
+                hem de doyurucu bir atıştırmalıktır. Tuzlu kavrulmuş yer fıstıklarımız, 
+                geleneksel yöntemlerle hazırlanarak en taze haliyle sizlere sunulmaktadır.
+            </p>
+        </div>
+    </div>
+
+    <!-- Ceviz Modal -->
+    <div id="cevizModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cevizModal')">&times;</span>
+            <h2>Taze Ceviz</h2>
+            <p>
+                Omega-3 yağ asitleri ve antioksidanlar açısından zengin olan ceviz, 
+                beyin sağlığına olan faydalarıyla bilinir. Özenle toplanan ve işlenen 
+                cevizlerimiz, doğal yapısı korunarak sizlere ulaştırılmaktadır. Taze ve 
+                kırılgan yapısıyla hem çerez olarak hem de tatlılarda kullanım için idealdir.
+            </p>
+        </div>
+    </div>
+
+    <!-- Kaju Modal -->
+    <div id="kajuModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('kajuModal')">&times;</span>
+            <h2>Kavrulmuş Kaju</h2>
+            <p>
+                Premium kalite kajularımız, özel kavurma teknikleriyle hazırlanarak eşsiz 
+                lezzetini korumaktadır. Mineral ve vitamin deposu olan kaju, kreması yapısı 
+                ve hafif tatlı aromasıyla en sevilen kuruyemişler arasındadır. İdeal ısıda 
+                kavrularak çıtır çıtır bir lezzet sunar.
+            </p>
+        </div>
+    </div>
+
+    <!-- Mısır Modal -->
+    <div id="misirModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('misirModal')">&times;</span>
+            <h2>Kavrulmuş Mısır</h2>
+            <p>
+                Özel kavurma tekniğiyle hazırlanan mısırlarımız, çıtır çıtır yapısı ve 
+                kendine has lezzetiyle vazgeçilmez bir atıştırmalıktır. Lif açısından 
+                zengin olan kavrulmuş mısır, hem doyurucu hem de sağlıklı bir alternatif 
+                sunar. Taze ve kaliteli mısırlar özenle seçilerek sizler için hazırlanır.
+            </p>
+        </div>
+    </div>
+
+    <!-- Antep Fıstığı Modal -->
+    <div id="antepModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('antepModal')">&times;</span>
+            <h2>Taze Antep Fıstığı</h2>
+            <p>
+                Gaziantep'in meşhur fıstığı, özenle toplanıp işlendikten sonra ideal ısıda kavrularak sizlere sunulmaktadır. Fıstıkların hafif tuzlu dokusu ve aroması, hem sağlıklı hem de lezzetli bir atıştırmalık sunar.
+            </p>
+        </div>
+    </div>
+
+    <!-- Kuru Üzüm Modal -->
+    <div id="uzumModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('uzumModal')">&times;</span>
+            <h2>Taze Kuru Üzüm</h2>
+            <p>
+                Çekirdeksiz kuru üzüm, çıtır çıtır bir lezzet sunar. Özenle seçilmiş ve işlenmiş kuru üzümlerimiz, doğal yapısı korunarak sizlere ulaştırılmaktadır. Taze ve kırılgan yapısıyla hem çerez olarak hem de tatlılarda kullanım için idealdir.
+            </p>
+        </div>
+    </div>
+
+    <!-- Kuru Kayısı Modal -->
+    <div id="kayisiModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('kayisiModal')">&times;</span>
+            <h2>Malatya Kuru Kayısı</h2>
+            <p>
+                Doğal Malatya kayısısı, özenle toplanıp işlendikten sonra ideal ısıda kavrularak sizlere sunulmaktadır. Kayısıların hafif tatlı aroması ve çıtır yapısı, hem sağlıklı hem de lezzetli bir atıştırmalık sunar.
+            </p>
+        </div>
+    </div>
+
+    <!-- Çam Fıstığı Modal -->
+    <div id="camfistigiModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('camfistigiModal')">&times;</span>
+            <h2>Çam Fıstığı</h2>
+            <p>
+                Premium kalite çam fıstığı, özenle toplanıp işlendikten sonra ideal ısıda kavrularak sizlere sunulmaktadır. Çam fıstığının hafif tuzlu dokusu ve aroması, hem sağlıklı hem de lezzetli bir atıştırmalık sunar.
+            </p>
+        </div>
+    </div>
+
+    <!-- Hurma Modal -->
+    <div id="hurmaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('hurmaModal')">&times;</span>
+            <h2>Medine Hurması</h2>
+            <p>
+                Medine'nin bereketli topraklarından gelen hurmalarımız, doğal tatları ve 
+                besleyici özellikleriyle öne çıkar. Yüksek lif, potasyum ve magnezyum içeriğiyle 
+                sağlıklı beslenmenin vazgeçilmez bir parçasıdır. Taze ve yumuşak dokusuyla, 
+                hem ara öğün hem de tatlı ihtiyacınız için ideal bir seçenektir. Doğal şeker 
+                kaynağı olan hurma, enerji verici özelliğiyle de bilinir.
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function scrollToContact() {
+            document.querySelector('.contact-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function toggleSearch() {
+            const searchBox = document.getElementById('searchBox');
+            searchBox.classList.toggle('active');
+        }
+
+        function performSearch() {
+            const searchInput = document.querySelector('.search-box input');
+            const searchTerm = searchInput.value.toLowerCase();
+            const products = {
+                'kabak': 'kabakModal',
+                'kabak çekirdeği': 'kabakModal',
+                'karışık': 'karisikModal',
+                'karısık kuruyemiş': 'karisikModal',
+                'premium': 'karisikModal',
+                'leblebi': 'leblebiModal',
+                'sarı leblebi': 'leblebiModal',
+                'ayçekirdeği': 'ayModal',
+                'ay çekirdeği': 'ayModal',
+                'badem': 'bademModal',
+                'kavrulmuş badem': 'bademModal',
+                'fındık': 'findikModal',
+                'kavrulmuş fındık': 'findikModal',
+                'giresun': 'findikModal',
+                'yer fıstığı': 'fistikModal',
+                'fıstık': 'fistikModal',
+                'ceviz': 'cevizModal',
+                'taze ceviz': 'cevizModal',
+                'kaju': 'kajuModal',
+                'kavrulmuş kaju': 'kajuModal',
+                'mısır': 'misirModal',
+                'kavrulmuş mısır': 'misirModal',
+                'antep': 'antepModal',
+                'antep fıstığı': 'antepModal',
+                'fıstık': 'antepModal',
+                'kuru üzüm': 'uzumModal',
+                'üzüm': 'uzumModal',
+                'çekirdeksiz': 'uzumModal',
+                'kayısı': 'kayisiModal',
+                'kuru kayısı': 'kayisiModal',
+                'malatya': 'kayisiModal',
+                'çam fıstığı': 'camfistigiModal',
+                'çam': 'camfistigiModal',
+                'hurma': 'hurmaModal',
+                'medine': 'hurmaModal',
+                'medine hurması': 'hurmaModal'
+            };
+            
+            let found = false;
+            for (let keyword in products) {
+                if (searchTerm.includes(keyword)) {
+                    openModal(products[keyword]);
+                    found = true;
+                    break;
+                }
+            }
+            
+            if (!found) {
+                alert('Aradığınız ürün bulunamadı.');
+            }
+
+            searchInput.value = '';
+            document.getElementById('searchBox').classList.remove('active');
+        }
+
+        // Enter tuşuna basıldığında arama yapma
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Modal dışına tıklandığında kapatma
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+
+        // İletişim butonunun görünürlüğünü kontrol et
+        window.addEventListener('scroll', function() {
+            const contactButton = document.getElementById('contactButton');
+            const contactSection = document.querySelector('.contact-section');
+            const rect = contactSection.getBoundingClientRect();
+            
+            // İletişim bölümü görünür olduğunda butonu gizle
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                contactButton.style.opacity = '0';
+                contactButton.style.pointerEvents = 'none';
+            } else {
+                contactButton.style.opacity = '1';
+                contactButton.style.pointerEvents = 'auto';
+            }
+        });
+    </script>
+</body>
+</html> 
